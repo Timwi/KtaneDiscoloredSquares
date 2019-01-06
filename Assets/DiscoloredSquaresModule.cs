@@ -53,6 +53,8 @@ public class DiscoloredSquaresModule : MonoBehaviour
         _colorblind = ColorblindMode.ColorblindModeActive;
 
         var rnd = RuleSeedable.GetRNG();
+        Debug.LogFormat("[Discolored Squares #{0}] Using rule seed: {1}", _moduleId, rnd.Seed);
+
         var skip = rnd.Next(0, 6);
         for (var i = 0; i < skip; i++)
             rnd.NextDouble();
